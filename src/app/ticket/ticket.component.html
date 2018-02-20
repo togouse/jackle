@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="container">
+       
+        <div class="row">
+          <div class="col-sm-6" >
+              <h2 class="form-signin-heading">Add Ticket</h2>
+             <form class="form-signin">
+                <input type="text" name="addTicket" placeholder="type for new ticket" [(ngModel)]="addTicket" class="input-block-level" />
+                <input type="submit" value="Create Ticket" (click)="addNewTicket()" class="btn btn-large btn-primary">
+             </form> 
+          </div>
+          <div class="col-sm-6" >
+              <h2 class="form-signin-heading"> My Total Tickets ({{totalTickets}})</h2>
+              <ul class="nav nav-stacked" >
+                  <li class="panel" *ngFor="let t of tickets" >{{ t }} <span class="glyphicon glyphicon-remove" (click)="removeTicket(t)" style="cursor:pointer;color: red"></span></li>
+             </ul>
+          </div>
+        </div>
+      </div>
+
+
+  
+
+
+  
